@@ -11,4 +11,4 @@ If you would like to replicate the analysis, clone this repository and proceed r
 -
 -
 
-Please contact Eva Maire (emg.maire@gmaiL.com) for questions regarding the code or modelling.
+Please contact Eva Maire (emg.maire@gmail.com) for questions regarding the code or modelling.
