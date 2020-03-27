@@ -53,7 +53,7 @@ head(env)
 PCA(env, scale.unit = TRUE, graph = F)
 res.pca <- PCA(env, graph = FALSE)
 
-# Figure S1 - Associations between environmental and benthic conditions of reefs through a Principal Component 
+# Appendix 1 - Associations between environmental and benthic conditions of reefs through a Principal Component 
 # Analysis and corresponding loadings. 
 
 pca_S1 <- fviz_pca_var(res.pca, col.var = "contrib",
@@ -89,7 +89,7 @@ mod<-gam(log_fish_biomass~s(pc1,bs="cr",k=3)+s(pc2,bs="cr",k=3)+s(human_pop,bs="
 AICc(mod) #AICc = 14.9
 summary(mod) #R-sq (adj) = 0.83
 
-#Step 2 - Each partial effect plot needs to be limited to the range of the data
+# Step 2 - Each partial effect plot needs to be limited to the range of the data
 
 #Travel time from the nearest village
 visreg_village <- visreg(mod,"tt_village",by="management",overlay=T,ylim=c(2,4),band=T,plot=F) 
@@ -398,10 +398,10 @@ multiplot(pca, middlemen, cols=2)
 
 #############################################################################################################
 
-# Supplemental figures
+# Appendices
 
 #############################################################################################################
-# Figure S2 - Correlogram showing correlations between the ten socioeconomic indicators measured of coastal 
+# Appendix 2 - Correlogram showing correlations between the ten socioeconomic indicators measured of coastal 
 # communities and market access. 
 
 require(corrgram)
@@ -441,7 +441,7 @@ corrplot(cor_mat, method="color", col=col(200),
 )
 
 #############################################################################################################
-# Figure S3 - Scores (cos2) of (a) each variable and (b) community integrated in the PCA linking 
+# Appendix 3 - Scores (cos2) of (a) each variable and (b) community integrated in the PCA linking 
 # market access and social characteristics of coastal communities.
 res.pca <- PCA(coastal_communities[,-13], graph = F, quanti.sup=12) #Management as supplementary variable and remove the identity of Market for PCA
 
@@ -471,7 +471,7 @@ comm3 <- comm2 + theme(axis.text.x = element_text(angle = 45, hjust = 1))
 multiplot(var3, comm3, cols=2)
 
 #############################################################################################################
-#Figure S4 - Associations between market proximity and selling fish catches
+# Appendix 4 - Associations between market proximity and selling fish catches
 sold <- arrange(selling_strategies, factor(selling, levels = c("Community only","Middlemen & market","Middlemen")))
 
 prop_fish_sold <- ggplot(aes(x=selling, y=fish_sold),data=sold) +
