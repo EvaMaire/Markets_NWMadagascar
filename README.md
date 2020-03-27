@@ -5,10 +5,6 @@ This repository holds the majority of code used for the analysis and plots prese
 
 All modelling and plots were produced in R. 
 
-If you would like to replicate the analysis, clone this repository and run the R code in this order:
-
--
--
--
+If you would like to replicate the analysis, clone this repository and run the R code.
 
 Please contact Eva Maire (emg.maire@gmail.com) for questions regarding the code or modelling.
